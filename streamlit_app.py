@@ -30,7 +30,7 @@ def load_page():
 def get_pickle_data():
     #download = open("/workspaces/blank-app/.github/deployed_rfmodel_pca10_nor_smote.sav", "rb")
     
-    download = BytesIO(requests.get("deployed_rfmodel_pca10_nor_smote.sav").content)
+    download = BytesIO(requests.get("https://github.com/drt-humanus/blank-app/blob/2319314002c7e992f0f0d39f105d3a6e0c5ffafb/deployed_rfmodel_pca10_nor_smote.sav").content)
     #download = requests.get("https://www.trim.vn/nnEKYs")
     #download = open(download.content, "rb")
     return pickle.load(download)
