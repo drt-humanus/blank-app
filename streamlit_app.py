@@ -28,9 +28,9 @@ def load_page():
 #st.cache_data(suppress_st_warning=True)
 #@st.cache_data(suppress_st_warning=True)
 def get_pickle_data():
-    download = open("/workspaces/blank-app/.github/deployed_rfmodel_pca10_nor_smote.sav", "rb")
+    #download = open("/workspaces/blank-app/.github/deployed_rfmodel_pca10_nor_smote.sav", "rb")
     
-    #download = BytesIO(requests.get("https://www.trim.vn/nnEKYs").content)
+    download = BytesIO(requests.get("deployed_rfmodel_pca10_nor_smote.sav").content)
     #download = requests.get("https://www.trim.vn/nnEKYs")
     #download = open(download.content, "rb")
     return pickle.load(download)
