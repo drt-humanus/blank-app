@@ -1,6 +1,6 @@
 streamlit
-#pandas
-#numpy
+pandas
+numpy
 #matplotlib
 scikit-learn
 pickle
