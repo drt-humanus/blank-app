@@ -27,7 +27,7 @@ def load_page():
     
 @st.cache_data
 def get_pickle_data():
-    with open("/workspaces/blank-app/.github/deployed_rfmodel_pca10_nor_smote.sav", "rb") as download:
+    with open("https://github.com/drt-humanus/blank-app/blob/18518616e78e22e090304dcd83141e541195f757/deployed_rfmodel_pca10_nor_smote.sav", "rb") as download:
         return pickle.load(download)
 
 def calculate_risk():
