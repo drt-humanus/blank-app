@@ -4,6 +4,7 @@ import streamlit as st
 import requests
 from io import BytesIO
 import pickle
+import urllib.request
 from numpy.random import default_rng as rng
 
 if 'load' not in st.session_state:
@@ -11,8 +12,8 @@ if 'load' not in st.session_state:
 
 def load_page():
     st.write("""
-    # [AISTEMI] AI IN PREDICTION OF MORTILITY OF STEMI
-    (Ứng dụng AI tiên lượng tử vong trong nhồi máu có tim cấp)
+    # [AIAM] AI IN PREDICTION OF MORTILITY IN ACUTE MYOCARDIAL INFARCTION
+    (Ứng dụng AI tiên lượng tử vong trong nhồi máu cơ tim cấp)
     """)
     st.markdown(
         """
@@ -25,17 +26,21 @@ def load_page():
     """, unsafe_allow_html=True)
     
 #st.cache_data(suppress_st_warning=True)
-@st.cache_data
+#@st.cache_data(suppress_st_warning=True)
 def get_pickle_data():
-    download = open("deployed_gbmodel_pca10.sav", "rb")
+    download = open("/workspaces/blank-app/.github/deployed_rfmodel_pca10_nor_smote.sav", "rb")
+    
+    #download = BytesIO(requests.get("https://www.trim.vn/nnEKYs").content)
+    #download = requests.get("https://www.trim.vn/nnEKYs")
+    #download = open(download.content, "rb")
     return pickle.load(download)
 
 def calculate_risk():
     load_page()
     show_user_input(user_input)
-    gb_model = get_pickle_data()
+    rf_model = get_pickle_data()
     # Store the models prediction in a variable
-    prediction = gb_model.predict_proba(user_input)
+    prediction = rf_model.predict_proba(user_input)
     # Set a subheader and display the classification
     col3, col4 = st.columns(2)
     with col3:
