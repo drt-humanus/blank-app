@@ -25,7 +25,7 @@ def load_page():
     </style>
     """, unsafe_allow_html=True)
     
-@st.cache_data(suppress_st_warning=True)
+@st.cache_data
 def get_pickle_data():
     with open("/workspaces/blank-app/.github/deployed_rfmodel_pca10_nor_smote.sav", "rb") as download:
         return pickle.load(download)
