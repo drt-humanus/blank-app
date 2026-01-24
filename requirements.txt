@@ -2,6 +2,6 @@ streamlit
 pandas
 numpy
 matplotlib
-sklearn
+scikit-learn
 pickle
-urllib.request
+
