@@ -27,7 +27,7 @@ def load_page():
     
 @st.cache_data
 def get_pickle_data():
-    with open("https://github.com/drt-humanus/blank-app/blob/18518616e78e22e090304dcd83141e541195f757/deployed_rfmodel_pca10_nor_smote.sav", "rb") as download:
+    with open("deployed_rfmodel_pca10_nor_smote.sav", "rb") as download:
         return pickle.load(download)
 
 def calculate_risk():
@@ -44,7 +44,7 @@ def calculate_risk():
         if prediction[0,1]<0.25:
             st.markdown("<h1 style='color: green;font-weight: bold;'>" + ' ' + str(f'{prediction[0,1]*100:5.2f}') + ' ' + '%' +"</h1>", unsafe_allow_html=True)
         if prediction[0,1]>0.25 and prediction[0,1]<0.75:
-            st.markdown("<h1 style='color: black;font-weight: bold;'>" + ' ' + str(f'{prediction[0,1]*100:5.2f}') + ' ' + '%' +"</h1>", unsafe_allow_html=True)
+            st.markdown("<h1 style='color: white;font-weight: bold;'>" + ' ' + str(f'{prediction[0,1]*100:5.2f}') + ' ' + '%' +"</h1>", unsafe_allow_html=True)
         if prediction[0,1]>0.75:
             st.markdown("<h1 style='color: red;font-weight: bold;'>" + ' ' + str(f'{prediction[0,1]*100:5.2f}') + ' ' + '%' +"</h1>", unsafe_allow_html=True)
     st.write('Mô hình Gradient Boosting' + ' (' +  'Exponential, Friedmen MSE, sqrt)')
