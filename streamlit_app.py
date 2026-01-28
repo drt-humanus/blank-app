@@ -13,7 +13,7 @@ if 'load' not in st.session_state:
 def load_page():
     st.write("""
     # [AIAMI] AI IN PREDICTION OF MORTILITY IN ACUTE MYOCARDIAL INFARCTION
-    (Ứng dụng AI tiên lượng tử vong trong nhồi máu cơ tim cấp)
+    (Ứng dụng tiên lượng tử vong do mọi nguyên nhân trong 12 tháng ở bệnh nhân nhồi máu cơ tim cấp)
     """)
     st.markdown(
         """
@@ -82,7 +82,7 @@ with st.sidebar.form(key ='Form1'):
     killip = st.selectbox('Phân độ Killip', options=['Class I','Class II','Class III','Class IV'])
     clicnicaltype = st.selectbox('Thể lâm sàng', options=['Non-STEMI','STEMI'])
     rca = st.selectbox('RCA', options = ["Không", "Có"])
-    lda = st.selectbox('LDA', options = ["Không", "Có"])
+    lda = st.selectbox('LAD', options = ["Không", "Có"])
     smoking = st.selectbox('Hút thuốc lá', options = ["Không", "Có"])
     aceiarb = st.selectbox('ACEiARB', options = ["Không", "Có"])
     anemia = st.selectbox('Thiếu máu', options = ["Không", "Có"])
