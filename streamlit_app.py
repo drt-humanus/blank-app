@@ -81,12 +81,12 @@ with st.sidebar.form(key ='Form1'):
 
     killip = st.selectbox('Phân độ Killip', options=['Class I','Class II','Class III','Class IV'])
     clicnicaltype = st.selectbox('Thể lâm sàng', options=['Non-STEMI','STEMI'])
-    rca = st.selectbox('RCA', options = ["Không", "Có"])
-    lda = st.selectbox('LAD', options = ["Không", "Có"])
+    rca = st.selectbox('Tổn thương RCA', options = ["Không", "Có"])
+    lda = st.selectbox('Tổn thương LAD', options = ["Không", "Có"])
     smoking = st.selectbox('Hút thuốc lá', options = ["Không", "Có"])
-    aceiarb = st.selectbox('ACEiARB', options = ["Không", "Có"])
+    aceiarb = st.selectbox('Sử dụng thuốc ACEi/ARB', options = ["Không", "Có"])
     anemia = st.selectbox('Thiếu máu', options = ["Không", "Có"])
-    troponinadmission = st.number_input('Trị số Troponin (ng/mL)', min_value=1.0, max_value=1000.0, value=15.0, step=0.1, format=f'%.1f', help='Nhập đến một chữ số thập phân')
+    troponinadmission = st.number_input('Troponin I lúc nhập viện (ng/mL)', min_value=1.0, max_value=1000.0, value=15.0, step=0.1, format=f'%.1f', help='Nhập đến một chữ số thập phân')
     age = st.number_input('Tuổi', min_value=10, max_value=90, value=64, step=1)
     gensiniscore = st.number_input('Điểm số Gensini', min_value=1, max_value=200, value=9, step=1)
     st.markdown("""
