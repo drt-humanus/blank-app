@@ -88,7 +88,7 @@ with st.sidebar.form(key ='Form1'):
     troponinadmission = st.number_input('Troponin I lúc nhập viện (ng/mL)', min_value=1.0, max_value=1000.0, value=15.0, step=0.1, format=f'%.1f', help='Nhập đến một chữ số thập phân')
     anemia = st.selectbox('Thiếu máu', options = ["Không", "Có"])
     aceiarb = st.selectbox('Sử dụng thuốc ACEi/ARB', options = ["Không", "Có"])
-    graceadmission = st.number_input('Điểm số GRACE', min_value=1, max_value=300, value=9, step=1)
+
     st.markdown("""
             <style>
                 div.stButton > button:first-child {
@@ -115,8 +115,7 @@ with st.sidebar.form(key ='Form1'):
                     'rca': khongcolist.index(rca),
                     'troponinadmission': troponinadmission,
                     'anemia': khongcolist.index(anemia),
-                    'aceiarb': khongcolist.index(aceiarb),
-                    'graceadmission': graceadmission
+                    'aceiarb': khongcolist.index(aceiarb)
                 }
     # Transform the data into a data frame
     user_input = pd.DataFrame(user_data, index=[0])
