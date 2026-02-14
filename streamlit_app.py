@@ -46,7 +46,7 @@ def calculate_risk():
         if prediction[0,1]>0.25 and prediction[0,1]<0.75:
             st.markdown("<h1 style='color: ogran;font-weight: bold;'>" + ' ' + str(f'{prediction[0,1]*100:5.2f}') + ' ' + '%' +"</h1>", unsafe_allow_html=True)
         if prediction[0,1]>0.75:
-            st.markdown("<h1 style='color: red;font-weight: bold;'>" + ' ' + str(f'{prediction[0,1]*100:5.2f}') + ' ' + '%' +"</h1>", unsafe_allow_html=True)
+            st.markdown("<h1 style='color: blue;font-weight: bold;'>" + ' ' + str(f'{prediction[0,1]*100:5.2f}') + ' ' + '%' +"</h1>", unsafe_allow_html=True)
     st.write('Mô hình Random forest' + ' (' +  'Log_loss)')
     st.write('Độ chính xác của chẩn đoán: 84.6%' + ' ' + '('+  'AUC: 0.73)')
     st.session_state['load'] = 1
