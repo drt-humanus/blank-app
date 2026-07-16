@@ -12,7 +12,7 @@ if 'load' not in st.session_state:
 
 def load_page():
     st.write("""
-    # [AIAMI] AI IN PREDICTION OF MORTILITY IN ACUTE MYOCARDIAL INFARCTION
+    # [AIAMI] AI IN PREDICTION OF MORTALITY IN ACUTE MYOCARDIAL INFARCTION
     (Ứng dụng tiên lượng tử vong do mọi nguyên nhân trong 12 tháng ở bệnh nhân nhồi máu cơ tim cấp)
     """)
     st.markdown(
